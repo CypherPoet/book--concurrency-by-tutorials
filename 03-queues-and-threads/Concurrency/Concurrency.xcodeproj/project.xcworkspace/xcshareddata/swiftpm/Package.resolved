@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CPStarterKitProtocols",
+        "repositoryURL": "https://github.com/CypherPoet/CPStarterKitProtocols.git",
+        "state": {
+          "branch": null,
+          "revision": "e290096eff325a64b647d89e5e291864684b2336",
+          "version": "0.0.3"
+        }
+      },
+      {
+        "package": "CypherPoetStarterKit",
+        "repositoryURL": "https://github.com/CypherPoet/CypherPoetStarterKit.git",
+        "state": {
+          "branch": null,
+          "revision": "7db9dfd33bc1dd1f0cc80cada1629f3e53aa25ea",
+          "version": "0.0.1"
+        }
+      },
+      {
+        "package": "NetStack",
+        "repositoryURL": "https://github.com/CypherPoet/NetStack.git",
+        "state": {
+          "branch": null,
+          "revision": "47016c2d89ac01062881499fc9c8cc05bfc60b47",
+          "version": "0.0.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
