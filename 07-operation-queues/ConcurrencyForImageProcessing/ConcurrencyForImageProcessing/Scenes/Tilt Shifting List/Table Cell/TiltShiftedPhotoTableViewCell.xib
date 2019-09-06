@@ -22,8 +22,13 @@
                             <constraint firstAttribute="width" secondItem="8zq-wa-565" secondAttribute="height" multiplier="1:1" id="1fQ-Kx-QvB"/>
                         </constraints>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fvV-5r-hNI">
+                        <rect key="frame" x="141.5" y="124.5" width="37" height="37"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="fvV-5r-hNI" firstAttribute="centerX" secondItem="8zq-wa-565" secondAttribute="centerX" id="Chi-dw-2zW"/>
+                    <constraint firstItem="fvV-5r-hNI" firstAttribute="centerY" secondItem="8zq-wa-565" secondAttribute="centerY" id="PXn-W2-BuH"/>
                     <constraint firstItem="8zq-wa-565" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Rv7-oM-3GM"/>
                     <constraint firstItem="8zq-wa-565" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kiy-7A-SwP"/>
                 </constraints>
@@ -33,6 +38,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="loadingSpinner" destination="fvV-5r-hNI" id="qDZ-fT-14N"/>
                 <outlet property="shiftedImageView" destination="8zq-wa-565" id="hiP-wm-vyw"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="72.991071428571431"/>

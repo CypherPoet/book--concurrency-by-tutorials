@@ -19,7 +19,7 @@ class TiltShiftingListViewController: UIViewController {
     private var currentDataSnapshot: DataSourceSnapshot!
     private var dataSource: DataSource!
     
-    private lazy var filteringBlockOperation = BlockOperation()
+    private lazy var operationQueue = OperationQueue()
 }
 
 struct PhotoItem: Identifiable, Hashable {
@@ -90,7 +90,7 @@ private extension TiltShiftingListViewController {
                 ) as? TiltShiftedPhotoTableViewCell
             else { fatalError() }
             
-            self?.configure(cell, with: photoItem)
+            self?.configure(cell, with: photoItem, at: indexPath)
             
             return cell
         }
@@ -109,14 +109,25 @@ private extension TiltShiftingListViewController {
     }
     
     
-    func configure(_ cell: TiltShiftedPhotoTableViewCell, with photoItem: PhotoItem) {
+    func configure(_ cell: TiltShiftedPhotoTableViewCell, with photoItem: PhotoItem, at indexPath: IndexPath) {
         guard let sourceImage = UIImage(named: photoItem.imageName) else { return }
-  
+        
         let filterOperation = TiltShiftingOperation(inputImage: sourceImage)
         
-        filterOperation.start()
+        filterOperation.completionBlock = {
+            DispatchQueue.main.async {
+                guard
+                    let cell = self.tableView.cellForRow(at: indexPath)
+                        as? TiltShiftedPhotoTableViewCell
+                else { return }
+            
+                cell.isLoading = false
+                cell.shiftedImage = filterOperation.outputImage
+            }
+        }
         
-        cell.shiftedImage = filterOperation.outputImage
+        cell.isLoading = true
+        operationQueue.addOperation(filterOperation)
     }
 }
 

@@ -11,6 +11,19 @@ import UIKit
 
 class TiltShiftedPhotoTableViewCell: UITableViewCell {
     @IBOutlet private var shiftedImageView: UIImageView!
+    @IBOutlet private var loadingSpinner: UIActivityIndicatorView!
+    
+    var isLoading: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                if self.isLoading {
+                    self.loadingSpinner.startAnimating()
+                } else {
+                    self.loadingSpinner.stopAnimating()
+                }
+            }
+        }
+    }
     
     var shiftedImage: UIImage? {
         didSet {
@@ -32,6 +45,13 @@ extension TiltShiftedPhotoTableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        isLoading = false
+        shiftedImageView?.image = nil
+
+        super.prepareForReuse()
     }
 }
 
