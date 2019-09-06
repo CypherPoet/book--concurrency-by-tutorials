@@ -22,15 +22,6 @@ class TiltShiftingListViewController: UIViewController {
     private lazy var operationQueue = OperationQueue()
 }
 
-struct PhotoItem: Identifiable, Hashable {
-    let id: UUID = UUID()
-    var imageName: String
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-        hasher.combine(imageName)
-    }
-}
 
 // MARK: - Table View Structure
 extension TiltShiftingListViewController {
