@@ -84,7 +84,7 @@
 		F351EAAF232166260043993F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F38C3FFD232175630082C3C9 /* Tilt Shifting */,
+				F38C3FFD232175630082C3C9 /* Tilt Shifting Comparison */,
 				F351EA9F232165F70043993F /* ViewController.swift */,
 				F351EAA6232165F90043993F /* LaunchScreen.storyboard */,
 				F38C3FFB2321728C0082C3C9 /* MainViewCoordinator.swift */,
@@ -109,14 +109,14 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
-		F38C3FFD232175630082C3C9 /* Tilt Shifting */ = {
+		F38C3FFD232175630082C3C9 /* Tilt Shifting Comparison */ = {
 			isa = PBXGroup;
 			children = (
 				F38C3FFE2321756D0082C3C9 /* TiltShiftingCoordinator.swift */,
 				F38C4000232178E40082C3C9 /* TiltShiftingViewController.swift */,
 				F38C40022321791B0082C3C9 /* TiltShifting.storyboard */,
 			);
-			path = "Tilt Shifting";
+			path = "Tilt Shifting Comparison";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
