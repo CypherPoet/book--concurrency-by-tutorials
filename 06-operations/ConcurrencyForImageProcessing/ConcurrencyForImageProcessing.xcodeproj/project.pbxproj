@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F305765F2322DE4100F9F1D5 /* TiltShiftingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305765E2322DE4100F9F1D5 /* TiltShiftingOperation.swift */; };
 		F351EA9C232165F70043993F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EA9B232165F70043993F /* AppDelegate.swift */; };
 		F351EA9E232165F70043993F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EA9D232165F70043993F /* SceneDelegate.swift */; };
 		F351EAA5232165F90043993F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F351EAA4232165F90043993F /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F305765E2322DE4100F9F1D5 /* TiltShiftingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingOperation.swift; sourceTree = "<group>"; };
 		F351EA98232165F70043993F /* ConcurrencyForImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyForImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F351EA9B232165F70043993F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F351EA9D232165F70043993F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				F38C400423219B3A0082C3C9 /* TiltShiftFilter.swift */,
 				F38C4006232284DF0082C3C9 /* LoadingViewController.swift */,
+				F305765E2322DE4100F9F1D5 /* TiltShiftingOperation.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F305765F2322DE4100F9F1D5 /* TiltShiftingOperation.swift in Sources */,
 				F351EAB6232167B40043993F /* AppCoordinator.swift in Sources */,
 				F3874727232291C70035EC9B /* TiltShiftingListCoordinator.swift in Sources */,
 				F38C400523219B3A0082C3C9 /* TiltShiftFilter.swift in Sources */,

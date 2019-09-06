@@ -19,6 +19,7 @@ class TiltShiftingListViewController: UIViewController {
     private var currentDataSnapshot: DataSourceSnapshot!
     private var dataSource: DataSource!
     
+    private lazy var filteringBlockOperation = BlockOperation()
 }
 
 struct PhotoItem: Identifiable, Hashable {
@@ -77,6 +78,7 @@ private extension TiltShiftingListViewController {
         )
     }
     
+    
     func makeDataSource() -> DataSource {
         DataSource(tableView: tableView) {
             [weak self] (tableView, indexPath, photoItem) -> UITableViewCell? in
@@ -88,7 +90,6 @@ private extension TiltShiftingListViewController {
                 ) as? TiltShiftedPhotoTableViewCell
             else { fatalError() }
             
-//            let tiltShiftingTask =
             self?.configure(cell, with: photoItem)
             
             return cell
@@ -110,27 +111,14 @@ private extension TiltShiftingListViewController {
     
     func configure(_ cell: TiltShiftedPhotoTableViewCell, with photoItem: PhotoItem) {
         guard let sourceImage = UIImage(named: photoItem.imageName) else { return }
+  
+        let filterOperation = TiltShiftingOperation(inputImage: sourceImage)
         
-        print("Beginning to filter image named \"\(photoItem.imageName)\"")
+        filterOperation.start()
         
-        guard
-            let filteredImage = TiltShiftFilter(inputImage: sourceImage, inputRadius: 3)?.outputImage
-        else {
-            print("Failed to generate filtered image for image named \"\(photoItem.imageName)\"")
-            return
-        }
-        
-        let ciContext = CIContext()
-        let contextRect = CGRect(origin: .zero, size: sourceImage.size)
-        
-        guard let cgImage = ciContext.createCGImage(filteredImage, from: contextRect) else {
-            print("Failed to generate CGImage for image named \"\(photoItem.imageName)\"")
-            return
-        }
-        
-        cell.shiftedImage = UIImage(cgImage: cgImage)
+        cell.shiftedImage = filterOperation.outputImage
     }
 }
 
 
-extension TiltShiftingListViewController: Storyboarded { }
+extension TiltShiftingListViewController: Storyboarded {}
