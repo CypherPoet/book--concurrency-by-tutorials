@@ -31,8 +31,8 @@ extension TiltShiftingCoordinator: Coordinator {
         )
         
         tiltShiftingViewController.tabBarItem = UITabBarItem(
-            title: "Tilt Shifting",
-            image: UIImage(systemName: "square.stack.3d.down.dottedline"),
+            title: "Comparison",
+            image: UIImage(systemName: "square.split.1x2"),
             tag: tabBarIndex
         )
         

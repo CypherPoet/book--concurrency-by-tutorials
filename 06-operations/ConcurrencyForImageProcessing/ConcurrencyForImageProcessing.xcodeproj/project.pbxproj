@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		F351EA9C232165F70043993F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EA9B232165F70043993F /* AppDelegate.swift */; };
 		F351EA9E232165F70043993F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EA9D232165F70043993F /* SceneDelegate.swift */; };
-		F351EAA0232165F70043993F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EA9F232165F70043993F /* ViewController.swift */; };
 		F351EAA5232165F90043993F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F351EAA4232165F90043993F /* Assets.xcassets */; };
 		F351EAA8232165F90043993F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F351EAA6232165F90043993F /* LaunchScreen.storyboard */; };
 		F351EAB4232167090043993F /* CypherPoetKit in Frameworks */ = {isa = PBXBuildFile; productRef = F351EAB3232167090043993F /* CypherPoetKit */; };
 		F351EAB6232167B40043993F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EAB5232167B40043993F /* AppCoordinator.swift */; };
+		F3874723232291A20035EC9B /* TiltShiftingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3874722232291A20035EC9B /* TiltShiftingList.storyboard */; };
+		F3874725232291B20035EC9B /* TiltShiftingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */; };
+		F3874727232291C70035EC9B /* TiltShiftingListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */; };
+		F387472B2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38747292322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift */; };
+		F387472C2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F387472A2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.xib */; };
 		F38C3FFC2321728C0082C3C9 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C3FFB2321728C0082C3C9 /* MainViewCoordinator.swift */; };
 		F38C3FFF2321756D0082C3C9 /* TiltShiftingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C3FFE2321756D0082C3C9 /* TiltShiftingCoordinator.swift */; };
 		F38C4001232178E40082C3C9 /* TiltShiftingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C4000232178E40082C3C9 /* TiltShiftingViewController.swift */; };
@@ -26,11 +30,15 @@
 		F351EA98232165F70043993F /* ConcurrencyForImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyForImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F351EA9B232165F70043993F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F351EA9D232165F70043993F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F351EA9F232165F70043993F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F351EAA4232165F90043993F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F351EAA7232165F90043993F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F351EAA9232165F90043993F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F351EAB5232167B40043993F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F3874722232291A20035EC9B /* TiltShiftingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TiltShiftingList.storyboard; sourceTree = "<group>"; };
+		F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingListViewController.swift; sourceTree = "<group>"; };
+		F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingListCoordinator.swift; sourceTree = "<group>"; };
+		F38747292322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftedPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		F387472A2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TiltShiftedPhotoTableViewCell.xib; sourceTree = "<group>"; };
 		F38C3FFB2321728C0082C3C9 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		F38C3FFE2321756D0082C3C9 /* TiltShiftingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingCoordinator.swift; sourceTree = "<group>"; };
 		F38C4000232178E40082C3C9 /* TiltShiftingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +92,8 @@
 		F351EAAF232166260043993F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F3874721232291660035EC9B /* Tilt Shifting List */,
 				F38C3FFD232175630082C3C9 /* Tilt Shifting Comparison */,
-				F351EA9F232165F70043993F /* ViewController.swift */,
 				F351EAA6232165F90043993F /* LaunchScreen.storyboard */,
 				F38C3FFB2321728C0082C3C9 /* MainViewCoordinator.swift */,
 			);
@@ -107,6 +115,26 @@
 				F351EAA4232165F90043993F /* Assets.xcassets */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		F3874721232291660035EC9B /* Tilt Shifting List */ = {
+			isa = PBXGroup;
+			children = (
+				F38747282322CE560035EC9B /* Table Cell */,
+				F3874722232291A20035EC9B /* TiltShiftingList.storyboard */,
+				F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */,
+				F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */,
+			);
+			path = "Tilt Shifting List";
+			sourceTree = "<group>";
+		};
+		F38747282322CE560035EC9B /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F38747292322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift */,
+				F387472A2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.xib */,
+			);
+			path = "Table Cell";
 			sourceTree = "<group>";
 		};
 		F38C3FFD232175630082C3C9 /* Tilt Shifting Comparison */ = {
@@ -186,6 +214,8 @@
 				F38C40032321791B0082C3C9 /* TiltShifting.storyboard in Resources */,
 				F351EAA8232165F90043993F /* LaunchScreen.storyboard in Resources */,
 				F351EAA5232165F90043993F /* Assets.xcassets in Resources */,
+				F3874723232291A20035EC9B /* TiltShiftingList.storyboard in Resources */,
+				F387472C2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F351EAB6232167B40043993F /* AppCoordinator.swift in Sources */,
+				F3874727232291C70035EC9B /* TiltShiftingListCoordinator.swift in Sources */,
 				F38C400523219B3A0082C3C9 /* TiltShiftFilter.swift in Sources */,
-				F351EAA0232165F70043993F /* ViewController.swift in Sources */,
+				F3874725232291B20035EC9B /* TiltShiftingListViewController.swift in Sources */,
+				F387472B2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift in Sources */,
 				F38C3FFC2321728C0082C3C9 /* MainViewCoordinator.swift in Sources */,
 				F351EA9C232165F70043993F /* AppDelegate.swift in Sources */,
 				F38C4007232284DF0082C3C9 /* LoadingViewController.swift in Sources */,

@@ -28,11 +28,14 @@ extension MainViewCoordinator: Coordinator {
     
     func start() {
         let tiltShiftingCoordinator = TiltShiftingCoordinator(tabBarIndex: 0)
-        tiltShiftingCoordinator.start()
+        let tiltShiftingListCoordinator = TiltShiftingListCoordinator(tabBarIndex: 1)
         
+        tiltShiftingCoordinator.start()
+        tiltShiftingListCoordinator.start()
         
         tabBarController.setViewControllers([
-            tiltShiftingCoordinator.rootViewController
+            tiltShiftingCoordinator.rootViewController,
+            tiltShiftingListCoordinator.rootViewController,
         ], animated: true)
         
         navController.setViewControllers([tabBarController], animated: true)

@@ -38,12 +38,12 @@ class TiltShiftingViewController: UIViewController {
 extension TiltShiftingViewController {
     
     static func instantiate(sourceImage: UIImage?) -> TiltShiftingViewController {
-        guard let imageToFiler = sourceImage else { preconditionFailure() }
+        guard let imageToFilter = sourceImage else { preconditionFailure() }
         
         let viewController = TiltShiftingViewController.instantiateFromStoryboard(
             named: "TiltShifting"
         )
-        viewController.imageToFilter = imageToFiler
+        viewController.imageToFilter = imageToFilter
 
         return viewController
     }
