@@ -15,6 +15,7 @@
 		F351EAB4232167090043993F /* CypherPoetKit in Frameworks */ = {isa = PBXBuildFile; productRef = F351EAB3232167090043993F /* CypherPoetKit */; };
 		F351EAB6232167B40043993F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EAB5232167B40043993F /* AppCoordinator.swift */; };
 		F35D07C923230A34003A0B59 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07C823230A34003A0B59 /* PhotoItem.swift */; };
+		F35D07CC2323D14D003A0B59 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07CB2323D14D003A0B59 /* AsyncOperation.swift */; };
 		F3874723232291A20035EC9B /* TiltShiftingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3874722232291A20035EC9B /* TiltShiftingList.storyboard */; };
 		F3874725232291B20035EC9B /* TiltShiftingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */; };
 		F3874727232291C70035EC9B /* TiltShiftingListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */; };
@@ -38,6 +39,7 @@
 		F351EAA9232165F90043993F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F351EAB5232167B40043993F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F35D07C823230A34003A0B59 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		F35D07CB2323D14D003A0B59 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		F3874722232291A20035EC9B /* TiltShiftingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TiltShiftingList.storyboard; sourceTree = "<group>"; };
 		F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingListViewController.swift; sourceTree = "<group>"; };
 		F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingListCoordinator.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		F351EAB02321664E0043993F /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				F35D07CA2323D140003A0B59 /* Operations */,
 				F38C400423219B3A0082C3C9 /* TiltShiftFilter.swift */,
 				F38C4006232284DF0082C3C9 /* LoadingViewController.swift */,
 				F305765E2322DE4100F9F1D5 /* TiltShiftingOperation.swift */,
@@ -129,6 +132,14 @@
 				F35D07C823230A34003A0B59 /* PhotoItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F35D07CA2323D140003A0B59 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F35D07CB2323D14D003A0B59 /* AsyncOperation.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		F3874721232291660035EC9B /* Tilt Shifting List */ = {
@@ -246,6 +257,7 @@
 				F38C400523219B3A0082C3C9 /* TiltShiftFilter.swift in Sources */,
 				F35D07C923230A34003A0B59 /* PhotoItem.swift in Sources */,
 				F3874725232291B20035EC9B /* TiltShiftingListViewController.swift in Sources */,
+				F35D07CC2323D14D003A0B59 /* AsyncOperation.swift in Sources */,
 				F387472B2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift in Sources */,
 				F38C3FFC2321728C0082C3C9 /* MainViewCoordinator.swift in Sources */,
 				F351EA9C232165F70043993F /* AppDelegate.swift in Sources */,
