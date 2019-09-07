@@ -12,6 +12,7 @@ import Foundation
 struct PhotoItem: Identifiable, Hashable {
     let id: UUID = UUID()
     var imageName: String
+    var imageURL: URL?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)

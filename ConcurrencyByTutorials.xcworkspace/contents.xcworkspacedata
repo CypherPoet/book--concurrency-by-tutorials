@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:08-asynchronous-operations/AsyncOperation.playground">
+      location = "group:05-concurrency-problems/ConcurrencyProblems/../../08-asynchronous-operations/ConcurrencyForImageProcessing/ConcurrencyForImageProcessing.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:07-operation-queues/ConcurrencyForImageProcessing/ConcurrencyForImageProcessing.xcodeproj">
+      location = "group:08-asynchronous-operations/AsyncOperation.playground">
    </FileRef>
    <FileRef
       location = "group:06-operations/BlockOperation.playground">
