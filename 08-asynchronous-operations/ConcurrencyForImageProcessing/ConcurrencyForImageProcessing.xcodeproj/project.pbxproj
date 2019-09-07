@@ -16,6 +16,11 @@
 		F351EAB6232167B40043993F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351EAB5232167B40043993F /* AppCoordinator.swift */; };
 		F35D07C923230A34003A0B59 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07C823230A34003A0B59 /* PhotoItem.swift */; };
 		F35D07CC2323D14D003A0B59 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07CB2323D14D003A0B59 /* AsyncOperation.swift */; };
+		F35D07D4232403F0003A0B59 /* PhotoItemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07D3232403F0003A0B59 /* PhotoItemModelController.swift */; };
+		F35D07D623240413003A0B59 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35D07D523240413003A0B59 /* Photos.plist */; };
+		F35D07D92324085F003A0B59 /* ImageTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07D82324085F003A0B59 /* ImageTransport.swift */; };
+		F35D07DC232408A8003A0B59 /* NetStack in Frameworks */ = {isa = PBXBuildFile; productRef = F35D07DB232408A8003A0B59 /* NetStack */; };
+		F35D07DE23244E0E003A0B59 /* ImageTransportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D07DD23244E0E003A0B59 /* ImageTransportOperation.swift */; };
 		F3874723232291A20035EC9B /* TiltShiftingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3874722232291A20035EC9B /* TiltShiftingList.storyboard */; };
 		F3874725232291B20035EC9B /* TiltShiftingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */; };
 		F3874727232291C70035EC9B /* TiltShiftingListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */; };
@@ -40,6 +45,10 @@
 		F351EAB5232167B40043993F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F35D07C823230A34003A0B59 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		F35D07CB2323D14D003A0B59 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		F35D07D3232403F0003A0B59 /* PhotoItemModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemModelController.swift; sourceTree = "<group>"; };
+		F35D07D523240413003A0B59 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		F35D07D82324085F003A0B59 /* ImageTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransport.swift; sourceTree = "<group>"; };
+		F35D07DD23244E0E003A0B59 /* ImageTransportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransportOperation.swift; sourceTree = "<group>"; };
 		F3874722232291A20035EC9B /* TiltShiftingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TiltShiftingList.storyboard; sourceTree = "<group>"; };
 		F3874724232291B20035EC9B /* TiltShiftingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingListViewController.swift; sourceTree = "<group>"; };
 		F3874726232291C70035EC9B /* TiltShiftingListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftingListCoordinator.swift; sourceTree = "<group>"; };
@@ -59,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F351EAB4232167090043993F /* CypherPoetKit in Frameworks */,
+				F35D07DC232408A8003A0B59 /* NetStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +94,13 @@
 		F351EA9A232165F70043993F /* ConcurrencyForImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
-				F35D07C723230A28003A0B59 /* Models */,
+				F35D07D7232405C4003A0B59 /* Networking */,
 				F351EAA9232165F90043993F /* Info.plist */,
-				F351EA9B232165F70043993F /* AppDelegate.swift */,
 				F351EAB5232167B40043993F /* AppCoordinator.swift */,
+				F351EA9B232165F70043993F /* AppDelegate.swift */,
 				F351EA9D232165F70043993F /* SceneDelegate.swift */,
 				F351EAB12321668B0043993F /* Content */,
+				F35D07C723230A28003A0B59 /* Models */,
 				F351EAB02321664E0043993F /* Reusables */,
 				F351EAAF232166260043993F /* Scenes */,
 			);
@@ -113,7 +124,6 @@
 				F35D07CA2323D140003A0B59 /* Operations */,
 				F38C400423219B3A0082C3C9 /* TiltShiftFilter.swift */,
 				F38C4006232284DF0082C3C9 /* LoadingViewController.swift */,
-				F305765E2322DE4100F9F1D5 /* TiltShiftingOperation.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 		F351EAB12321668B0043993F /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				F35D07D523240413003A0B59 /* Photos.plist */,
 				F351EAA4232165F90043993F /* Assets.xcassets */,
 			);
 			path = Content;
@@ -130,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F35D07C823230A34003A0B59 /* PhotoItem.swift */,
+				F35D07D3232403F0003A0B59 /* PhotoItemModelController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,8 +150,18 @@
 			isa = PBXGroup;
 			children = (
 				F35D07CB2323D14D003A0B59 /* AsyncOperation.swift */,
+				F305765E2322DE4100F9F1D5 /* TiltShiftingOperation.swift */,
+				F35D07DD23244E0E003A0B59 /* ImageTransportOperation.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		F35D07D7232405C4003A0B59 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F35D07D82324085F003A0B59 /* ImageTransport.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		F3874721232291660035EC9B /* Tilt Shifting List */ = {
@@ -190,6 +212,7 @@
 			name = ConcurrencyForImageProcessing;
 			packageProductDependencies = (
 				F351EAB3232167090043993F /* CypherPoetKit */,
+				F35D07DB232408A8003A0B59 /* NetStack */,
 			);
 			productName = ConcurrencyForImageProcessing;
 			productReference = F351EA98232165F70043993F /* ConcurrencyForImageProcessing.app */;
@@ -221,6 +244,7 @@
 			mainGroup = F351EA8F232165F70043993F;
 			packageReferences = (
 				F351EAB2232167090043993F /* XCRemoteSwiftPackageReference "CypherPoetKit" */,
+				F35D07DA232408A8003A0B59 /* XCRemoteSwiftPackageReference "NetStack" */,
 			);
 			productRefGroup = F351EA99232165F70043993F /* Products */;
 			projectDirPath = "";
@@ -241,6 +265,7 @@
 				F351EAA5232165F90043993F /* Assets.xcassets in Resources */,
 				F3874723232291A20035EC9B /* TiltShiftingList.storyboard in Resources */,
 				F387472C2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.xib in Resources */,
+				F35D07D623240413003A0B59 /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,11 +278,13 @@
 			files = (
 				F305765F2322DE4100F9F1D5 /* TiltShiftingOperation.swift in Sources */,
 				F351EAB6232167B40043993F /* AppCoordinator.swift in Sources */,
+				F35D07D4232403F0003A0B59 /* PhotoItemModelController.swift in Sources */,
 				F3874727232291C70035EC9B /* TiltShiftingListCoordinator.swift in Sources */,
 				F38C400523219B3A0082C3C9 /* TiltShiftFilter.swift in Sources */,
 				F35D07C923230A34003A0B59 /* PhotoItem.swift in Sources */,
 				F3874725232291B20035EC9B /* TiltShiftingListViewController.swift in Sources */,
 				F35D07CC2323D14D003A0B59 /* AsyncOperation.swift in Sources */,
+				F35D07DE23244E0E003A0B59 /* ImageTransportOperation.swift in Sources */,
 				F387472B2322CE840035EC9B /* TiltShiftedPhotoTableViewCell.swift in Sources */,
 				F38C3FFC2321728C0082C3C9 /* MainViewCoordinator.swift in Sources */,
 				F351EA9C232165F70043993F /* AppDelegate.swift in Sources */,
@@ -265,6 +292,7 @@
 				F351EA9E232165F70043993F /* SceneDelegate.swift in Sources */,
 				F38C3FFF2321756D0082C3C9 /* TiltShiftingCoordinator.swift in Sources */,
 				F38C4001232178E40082C3C9 /* TiltShiftingViewController.swift in Sources */,
+				F35D07D92324085F003A0B59 /* ImageTransport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +492,14 @@
 				minimumVersion = 0.0.1;
 			};
 		};
+		F35D07DA232408A8003A0B59 /* XCRemoteSwiftPackageReference "NetStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CypherPoet/NetStack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -471,6 +507,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F351EAB2232167090043993F /* XCRemoteSwiftPackageReference "CypherPoetKit" */;
 			productName = CypherPoetKit;
+		};
+		F35D07DB232408A8003A0B59 /* NetStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F35D07DA232408A8003A0B59 /* XCRemoteSwiftPackageReference "NetStack" */;
+			productName = NetStack;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

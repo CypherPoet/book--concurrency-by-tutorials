@@ -14,7 +14,7 @@ import CypherPoetKit
 class TiltShiftingListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     
-    private var sourcePhotoItems: [PhotoItem]!
+    private var modelController: PhotoItemModelController!
     
     private var currentDataSnapshot: DataSourceSnapshot!
     private var dataSource: DataSource!
@@ -37,11 +37,11 @@ extension TiltShiftingListViewController {
 // MARK: - Instantiation
 extension TiltShiftingListViewController {
     
-    static func instantiate(sourcePhotoItems: [PhotoItem]) -> TiltShiftingListViewController {
+    static func instantiate(modelController: PhotoItemModelController) -> TiltShiftingListViewController {
         let viewController = TiltShiftingListViewController.instantiateFromStoryboard(
             named: "TiltShiftingList"
         )
-        viewController.sourcePhotoItems = sourcePhotoItems
+        viewController.modelController = modelController
 
         return viewController
     }
@@ -55,7 +55,17 @@ extension TiltShiftingListViewController {
         
         setupTableView()
         dataSource = makeDataSource()
-        createSnapshot(withNew: sourcePhotoItems)
+        
+        modelController.loadPhotoItems { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let photoItems):
+                    self?.createSnapshot(withNew: photoItems)
+                case .failure:
+                    self?.createSnapshot(withNew: [])
+                }
+            }
+        }
     }
 }
 
@@ -100,25 +110,27 @@ private extension TiltShiftingListViewController {
     }
     
     
-    func configure(_ cell: TiltShiftedPhotoTableViewCell, with photoItem: PhotoItem, at indexPath: IndexPath) {
-        guard let sourceImage = UIImage(named: photoItem.imageName) else { return }
+    func configure(
+        _ cell: TiltShiftedPhotoTableViewCell,
+        with photoItem: PhotoItem,
+        at indexPath: IndexPath
+    ) {
+        let loadingOperation = modelController.loadingOperation(for: photoItem)
         
-        let filterOperation = TiltShiftingOperation(inputImage: sourceImage)
-        
-        filterOperation.completionBlock = {
+        loadingOperation.completionBlock = {
             DispatchQueue.main.async {
                 guard
                     let cell = self.tableView.cellForRow(at: indexPath)
                         as? TiltShiftedPhotoTableViewCell
                 else { return }
-            
+
                 cell.isLoading = false
-                cell.shiftedImage = filterOperation.outputImage
+                cell.shiftedImage = loadingOperation.loadedImage
             }
         }
         
         cell.isLoading = true
-        operationQueue.addOperation(filterOperation)
+        operationQueue.addOperation(loadingOperation)
     }
 }
 

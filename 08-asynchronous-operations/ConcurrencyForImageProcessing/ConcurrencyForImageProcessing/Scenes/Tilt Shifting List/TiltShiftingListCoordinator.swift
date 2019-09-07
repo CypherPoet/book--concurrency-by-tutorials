@@ -20,29 +20,15 @@ final class TiltShiftingListCoordinator: NavigationCoordinator {
         self.tabBarIndex = tabBarIndex
         self.navController = UINavigationController()
     }
-    
-    private static let sourceImageNames: [String] = [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-    ]
 }
  
 
 extension TiltShiftingListCoordinator: Coordinator {
 
     func start() {
-        let sourcePhotoItems = TiltShiftingListCoordinator.sourceImageNames.map { PhotoItem(imageName: $0) }
         
         let viewController = TiltShiftingListViewController.instantiate(
-            sourcePhotoItems: sourcePhotoItems
+            modelController: PhotoItemModelController()
         )
         
         viewController.tabBarItem = UITabBarItem(
