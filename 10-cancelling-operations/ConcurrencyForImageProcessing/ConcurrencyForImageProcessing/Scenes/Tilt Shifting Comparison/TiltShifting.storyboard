@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tilt Shifting View Controller-->
+        <scene sceneID="ymo-AY-IF2">
+            <objects>
+                <viewController storyboardIdentifier="TiltShiftingViewController" id="KKC-80-8fv" customClass="TiltShiftingViewController" customModule="ConcurrencyForImageProcessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzF-yr-9lr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="tPJ-T5-ygs">
+                                <rect key="frame" x="14" y="92" width="386" height="722"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_road_small" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-pS-aSY">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="343"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQD-Gc-2xc">
+                                        <rect key="frame" x="0.0" y="379" width="386" height="343"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tPJ-T5-ygs" firstAttribute="leading" secondItem="j4n-pz-iXq" secondAttribute="leading" constant="14" id="LUM-lv-TNc"/>
+                            <constraint firstItem="j4n-pz-iXq" firstAttribute="bottom" secondItem="tPJ-T5-ygs" secondAttribute="bottom" constant="48" id="UbI-3J-nae"/>
+                            <constraint firstItem="tPJ-T5-ygs" firstAttribute="top" secondItem="j4n-pz-iXq" secondAttribute="top" constant="48" id="f9J-ag-ibK"/>
+                            <constraint firstItem="j4n-pz-iXq" firstAttribute="trailing" secondItem="tPJ-T5-ygs" secondAttribute="trailing" constant="14" id="lIQ-o0-jZf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j4n-pz-iXq"/>
+                    </view>
+                    <connections>
+                        <outlet property="filteredImageView" destination="OQD-Gc-2xc" id="uN2-0r-k9N"/>
+                        <outlet property="sourceImageView" destination="H4m-pS-aSY" id="XRV-PJ-uLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9d-Ze-eYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-67" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dark_road_small" width="500" height="574"/>
+    </resources>
+</document>

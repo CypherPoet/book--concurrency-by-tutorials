@@ -19,20 +19,29 @@ _Projects, playgrounds, and other materials made while following along with the 
   - Some of the common pitfalls encountered while executing concurrent tasks.
 
 
-- [Chapter 6: Operations](06-operations)
+- [Chapter 6: Operations](./06-operations)
   - Utilizing the `Operation` class to gain more powerful control over concurrent tasks.
 
 
-- [Chapter 7: Operation Queues](07-operation-queues)
+- [Chapter 7: Operation Queues](./07-operation-queues)
   - Similar to Dispatch Queues, but for `Operation` instances.
 
 
-- [Chapter 8: Asynchronous Operations](08-asynchronous-operations)
+- [Chapter 8: Asynchronous Operations](./08-asynchronous-operations)
   - Making operations themselves asynchronous now that we can submit them to Operation Queues.
 
 
-- [Chapter 9: Operation Dependencies](09-operation-dependencies)
+- [Chapter 9: Operation Dependencies](./09-operation-dependencies)
   - The "killer feature" of `Operation`s is being able to tell the OS that one operation is dependant on another and shouldn't being until the dependency has finished.
 
-- [Chapter 10: Cancelling Operations](10-cancelling-operations)
+
+- [Chapter 10: Cancelling Operations](./10-cancelling-operations)
   - Cancelling operations when they're running &mdash; or before they've even started.
+
+
+- [Chapter 11: Core Data](./11-core-data)
+  - Core Data works well with concurrency &mdash; as long as a few specific rules are kept in mind. This chapter covers just that.
+
+
+- [Chapter 12: Thread Sanitizer](./12-thread-sanitizer)
+  - Data races occur when multiple threads access the same memory without synchronization, and at least one access is a write. This chapter covers using Apple’s Thread Sanitizer to detect data races.
