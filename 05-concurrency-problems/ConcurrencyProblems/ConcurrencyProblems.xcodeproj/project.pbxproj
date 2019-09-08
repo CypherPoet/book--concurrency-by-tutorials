@@ -25,13 +25,6 @@
 			remoteGlobalIDString = F343B095231E083F00D512CD;
 			remoteInfo = ConcurrencyProblems;
 		};
-		F35D07D1232402B9003A0B59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F35D07CD232402B8003A0B59 /* ConcurrencyForImageProcessing.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F351EA98232165F70043993F;
-			remoteInfo = ConcurrencyForImageProcessing;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +40,6 @@
 		F343B0B0231E084000D512CD /* ConcurrencyProblemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyProblemsTests.swift; sourceTree = "<group>"; };
 		F343B0B2231E084000D512CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F343B0BC231E092C00D512CD /* PriorityInversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityInversion.swift; sourceTree = "<group>"; };
-		F35D07CD232402B8003A0B59 /* ConcurrencyForImageProcessing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ConcurrencyForImageProcessing.xcodeproj; path = "../../08-asynchronous-operations/ConcurrencyForImageProcessing/ConcurrencyForImageProcessing.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +63,6 @@
 		F343B08D231E083F00D512CD = {
 			isa = PBXGroup;
 			children = (
-				F35D07CD232402B8003A0B59 /* ConcurrencyForImageProcessing.xcodeproj */,
 				F343B098231E083F00D512CD /* ConcurrencyProblems */,
 				F343B0AF231E084000D512CD /* ConcurrencyProblemsTests */,
 				F343B097231E083F00D512CD /* Products */,
@@ -117,14 +108,6 @@
 				F343B0BC231E092C00D512CD /* PriorityInversion.swift */,
 			);
 			path = Demos;
-			sourceTree = "<group>";
-		};
-		F35D07CE232402B8003A0B59 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F35D07D2232402B9003A0B59 /* ConcurrencyForImageProcessing.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +178,6 @@
 			mainGroup = F343B08D231E083F00D512CD;
 			productRefGroup = F343B097231E083F00D512CD /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F35D07CE232402B8003A0B59 /* Products */;
-					ProjectRef = F35D07CD232402B8003A0B59 /* ConcurrencyForImageProcessing.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F343B095231E083F00D512CD /* ConcurrencyProblems */,
@@ -208,16 +185,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F35D07D2232402B9003A0B59 /* ConcurrencyForImageProcessing.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ConcurrencyForImageProcessing.app;
-			remoteRef = F35D07D1232402B9003A0B59 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F343B094231E083F00D512CD /* Resources */ = {
