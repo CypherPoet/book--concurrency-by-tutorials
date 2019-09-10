@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OSLog
 
 final class TiltShiftingOperation: Operation {
     private let inputImage: UIImage?
@@ -38,9 +39,11 @@ extension TiltShiftingOperation {
 
 // MARK: - Main Task
 extension TiltShiftingOperation {
+    static let pointsOfInterestLog = OSLog(subsystem: "io.github.cypherpoet.ConcurrencyForImageProcessing", category: .pointsOfInterest)
     
     override func main() {
-        print("TiltShiftingOperation#main")
+        os_signpost(.begin, log: Self.pointsOfInterestLog, name: "TiltShiftingOperation#main")
+        defer { os_signpost(.end, log: Self.pointsOfInterestLog, name: "TiltShiftingOperation#main") }
         
         guard let sourceImage = imageToFilter else {
             // TODO: More robust handling here?
